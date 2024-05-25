@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        
+        <link rel="stylesheet" href="swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="styl.css">
+
+     <style>
+       /* Add this to your existing CSS file or within the <style> tag in your HTML file */
+body {
+    background-image: url('woman-2896389_1280.jpg'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background: none; /* Remove the background image from the footer */
+    background-color: #fff; /* Optional: Set a different background color for the footer */
+}
+
+/* Rest of your CSS */
+.slider {
+    padding: 2rem 0;
+}
+
+.slider__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 300px; /* Default height for larger screens */
+}
+
+.slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images cover the entire container */
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #000;
+}
+
+.swiper-pagination-bullet {
+    background: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .slider__container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .slider__container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider__container {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider__container {
+        height: 120px;
+    }
+}
+
+.wrapper1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.wrapper1 .title1 h1 {
+    color: green;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 3.5rem;
+}
+
+.contact-form {
+    display: flex;
+}
+
+.uil {
+    height: 50px;
+    width: 50px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+    width: 200%;
+}
+
+.input-fields .input,
+.msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #5f66618f;
+    padding: 10px;
+    color: black;
+    width: 100%;
+}
+
+.msg textarea {
+    height: 100px;
+}
+
+.msg .btn1 {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 0.2rem solid green;
+    color: green;
+    cursor: pointer;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    border-radius: 40px;
+    background: none;
+}
+
+.btn1 button[type="submit"] {
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+i {
+    color: green;
+}
+
+
+
+     </style>
+        
+
+        <title>contact</title>
+    </head>
+
+
+    <body>
+        
+
+        <header class="header" id="header" style="background-color: lightslategray;">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Travel</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index (1).html" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="discover.html" class="nav__link">Discover</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#place" class="nav__link">contact us</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+
+
+
+         <div   class="usama">
+    <section class="contact" id="contact" >
+        
+        <div class="wrapper1">
+            <div class="title1">
+              <h1>Contact us</h1>
+            </div>
+            <div class="contact-form">
+                <form method = "post" action = "contact_us.php">
+              <div class="input-fields">
+                
+                <input type="text" class="input"  placeholder="Name" name="name">
+                <input type="email" class="input"  placeholder="Email Address" name="email" pattern=".+@gmail\.com">
+                <input type="phone" class="input"  placeholder="Phone" name="phone">
+                <input type="text" class="input"  placeholder="Subject" name="subject">
+              </div>
+              <div class="msg">
+                <textarea placeholder="Message" name="message"></textarea> <br>
+                <div class="btn1"><button type="submit">send <i class="uil uil-message"></i></div>
+              </div>
+              </form>
+            </div>
+            </div> 
+        
+        </section>
+
+      </div>
+
+
+
+       <!--==================== SUBSCRIBE ====================-->
+       <section class="subscribe section">
+        <div class="subscribe__bg">
+            <div class="subscribe__container container">
+                <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                <p class="subscribe__description">Subscribe to our newsletter and get a 
+                    special 30% discount.
+                </p>
+
+                <form action="" class="subscribe__form">
+                    <input type="text" placeholder="Enter email" class="subscribe__input">
+
+                    <button class="button">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!--==================== SPONSORS ====================-->
+    <section class="sponsor section">
+        <div class="sponsor__container container grid">
+            <div class="sponsor__content" style="background-color: #fff;">
+                <img src="sponsors1.png" alt="" class="sponsor__img">
+            </div>
+            <div class="sponsor__content"  style="background-color: #fff;">
+                <img src="sponsors2.png" alt="" class="sponsor__img">
+            </div>
+            <div class="sponsor__content"  style="background-color: #fff;">
+                <img src="sponsors3.png" alt="" class="sponsor__img">
+            </div>
+            <div class="sponsor__content"  style="background-color: #fff;">
+                <img src="sponsors4.png" alt="" class="sponsor__img">
+            </div>
+            <div class="sponsor__content"  style="background-color: #fff;">
+                <img src="sponsors5.png" alt="" class="sponsor__img">
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div class="footer__content grid">
+            <div class="footer__data">
+                <h3 class="footer__title">Travel</h3>
+                <p class="footer__description">Travel you choose the <br> destination, 
+                    we offer you the <br> experience.
+                </p>
+                <div>
+                    <a href="https://www.facebook.com/usaama.ahmed.9?mibextid=LQQJ4d" target="_blank" class="footer__social">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/usama_alasow?igsh=aTFiN3MyeHZqczZj&utm_source=qr" target="_blank" class="footer__social">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__data">
+                <h3 class="footer__subtitle">About</h3>
+                <ul>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">About Us</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Features</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">New & Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__data">
+                <h3 class="footer__subtitle">Company</h3>
+                <ul>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Team</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Plan y Pricing</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Become a member</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__data">
+                <h3 class="footer__subtitle">Support</h3>
+                <ul>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">FAQs</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Support Center</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__rights">
+            <p class="footer__copy">&#169; 2021 Bedimcode. All rigths reserved.</p>
+            <div class="footer__terms">
+                <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                <a href="#" class="footer__terms-link">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--=============== SCROLL REVEAL===============-->
+<script src="scrollreveal.min.js"></script>
+        
+<!--=============== SWIPER JS ===============-->
+<script src="swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="main.js"></script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var swiper = new Swiper('.slider__container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+    </script>
+
+
+
+
+
+    </body>
+    </html>
